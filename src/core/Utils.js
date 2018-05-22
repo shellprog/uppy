@@ -70,7 +70,8 @@ function generateFileID (file) {
     file.name ? file.name.toLowerCase().replace(/[^A-Z0-9]/ig, '') : '',
     file.type,
     file.data.size,
-    file.data.lastModified
+    file.data.lastModified,
+    new Date().getTime()
   ].filter(val => val).join('-')
 }
 
